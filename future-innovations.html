@@ -219,8 +219,7 @@
             <div class="logo">SMART Tire Company</div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="airless-tire-technology.html">Airless Tire Technology</a></li>
+                    <li><a href="index.html">Airless Tire Technology</a></li>
                     <li><a href="sustainable-solutions.html">Sustainable Tire Solutions</a></li>
                     <li><a href="passenger-tires.html">SMART Passenger Tires</a></li>
                     <li><a href="commercial-fleet.html">Commercial Fleet Solutions</a></li>
@@ -302,17 +301,20 @@
 
     <script>
         // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId.startsWith('#')) {
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+      // Smooth scrolling for in-page navigation links (only href="#...")
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+});
+
 
         // Scroll to top button functionality
         const scrollTopBtn = document.querySelector('.scroll-top');
