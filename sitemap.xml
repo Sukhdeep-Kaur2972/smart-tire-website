@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://example.com/airless-tire-technology.html</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>http://example.com/sustainable-tire-solutions.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://example.com/smart-passenger-tires.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://example.com/commercial-fleet-solutions.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>http://example.com/future-tire-innovations.html</loc>
+    <priority>0.80</priority>
+  </url>
+</urlset>
