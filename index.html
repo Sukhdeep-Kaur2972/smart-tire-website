@@ -31,7 +31,6 @@
             color: var(--text-color);
         }
 
-        /* Header Styles */
         header {
             background-color: var(--light-bg);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -67,15 +66,19 @@
             color: var(--secondary-color);
             font-weight: 500;
             transition: color 0.3s;
-            position: relative;
-            padding: 0.5rem 0;
         }
 
         nav a:hover {
             color: var(--primary-color);
         }
 
-        /* Main Content Styles */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
         main {
             max-width: 1200px;
             margin: 0 auto;
@@ -109,20 +112,6 @@
             margin-bottom: 1rem;
         }
 
-        /* List Styles */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ul li {
-            position: relative;
-            margin-bottom: 0.5rem;
-            padding-left: 0;
-        }
-
-        /* Footer Styles */
         footer {
             background-color: var(--secondary-color);
             color: var(--light-bg);
@@ -143,17 +132,6 @@
             color: var(--light-bg);
         }
 
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-section ul li {
-            padding: 0;
-            margin-bottom: 0.5rem;
-        }
-
         .footer-section a {
             color: var(--light-bg);
             text-decoration: none;
@@ -171,7 +149,6 @@
             margin-top: 1rem;
         }
 
-        /* Scroll to Top Button */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
@@ -193,25 +170,53 @@
             opacity: 1;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
+            .hamburger {
+                display: block;
             }
 
             nav ul {
+                display: none;
                 flex-direction: column;
-                text-align: center;
                 gap: 1rem;
+                background-color: var(--light-bg);
+                padding: 1rem;
+                margin-top: 1rem;
             }
 
-            h1 {
-                font-size: 2rem;
+            nav ul.show {
+                display: flex;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
             }
 
-            .banner {
-                height: 300px;
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: var(--light-bg);
+                padding: 1rem;
+                margin-top: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 999;
+            }
+
+            nav ul.show {
+                display: flex;
             }
         }
     </style>
@@ -221,7 +226,10 @@
     <header>
         <div class="header-container">
             <div class="logo">SMART Tire Company</div>
-            <nav>
+
+            <div class="hamburger" id="hamburger">&#9776;</div>
+
+            <nav id="mobile-menu">
                 <ul>
                     <li><a href="index.html">Airless Tire Technology</a></li>
                     <li><a href="sustainable-solutions.html">Sustainable Tire Solutions</a></li>
@@ -386,6 +394,14 @@
         gtag('js', new Date());
 
         gtag('config', 'G-J9H1BEBHXV');
+    </script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.querySelector('#mobile-menu ul');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
     </script>
 
 </body>

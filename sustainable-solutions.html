@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore eco-friendly tire options by SMART Tire Company—durable, fuel-efficient, and designed to reduce carbon footprint for a greener future.">
-    <meta name="keywords" content="sustainable tire solutions, eco-friendly tires, green tire technology, recycled tire materials, low-carbon tires, environmental impact of tires, eco-conscious tire options, sustainable automotive solutions">
+    <meta name="description"
+        content="Explore eco-friendly tire options by SMART Tire Company—durable, fuel-efficient, and designed to reduce carbon footprint for a greener future.">
+    <meta name="keywords"
+        content="sustainable tire solutions, eco-friendly tires, green tire technology, recycled tire materials, low-carbon tires, environmental impact of tires, eco-conscious tire options, sustainable automotive solutions">
     <title>Sustainable Tire Solutions for a Greener Tomorrow | SMART Tire Company</title>
     <style>
         :root {
@@ -28,10 +31,9 @@
             color: var(--text-color);
         }
 
-        /* Header Styles */
         header {
             background-color: var(--light-bg);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -64,15 +66,19 @@
             color: var(--secondary-color);
             font-weight: 500;
             transition: color 0.3s;
-            position: relative;
-            padding: 0.5rem 0;
         }
 
         nav a:hover {
             color: var(--primary-color);
         }
 
-        /* Main Content Styles */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
         main {
             max-width: 1200px;
             margin: 0 auto;
@@ -106,20 +112,6 @@
             margin-bottom: 1rem;
         }
 
-        /* List Styles */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ul li {
-            position: relative;
-            margin-bottom: 0.5rem;
-            padding-left: 0;
-        }
-
-        /* Footer Styles */
         footer {
             background-color: var(--secondary-color);
             color: var(--light-bg);
@@ -140,17 +132,6 @@
             color: var(--light-bg);
         }
 
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-section ul li {
-            padding: 0;
-            margin-bottom: 0.5rem;
-        }
-
         .footer-section a {
             color: var(--light-bg);
             text-decoration: none;
@@ -168,7 +149,6 @@
             margin-top: 1rem;
         }
 
-        /* Scroll to Top Button */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
@@ -190,34 +170,66 @@
             opacity: 1;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
+            .hamburger {
+                display: block;
             }
 
             nav ul {
+                display: none;
                 flex-direction: column;
-                text-align: center;
                 gap: 1rem;
+                background-color: var(--light-bg);
+                padding: 1rem;
+                margin-top: 1rem;
             }
 
-            h1 {
-                font-size: 2rem;
+            nav ul.show {
+                display: flex;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
             }
 
-            .banner {
-                height: 300px;
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: var(--light-bg);
+                padding: 1rem;
+                margin-top: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 999;
+            }
+
+            nav ul.show {
+                display: flex;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="logo">SMART Tire Company</div>
-            <nav>
+
+            <div class="hamburger" id="hamburger">&#9776;</div>
+
+            <nav id="mobile-menu">
                 <ul>
                     <li><a href="index.html">Airless Tire Technology</a></li>
                     <li><a href="sustainable-solutions.html">Sustainable Tire Solutions</a></li>
@@ -230,44 +242,92 @@
     </header>
 
     <main>
-        <img src="assets/images/sustainable-tire-solutions-banner.jpg" alt="SMART Tire Company's eco-friendly and sustainable tire solutions showcasing green manufacturing processes" class="banner">
-        
+        <img src="assets/images/sustainable-tire-solutions-banner.jpg"
+            alt="SMART Tire Company's eco-friendly and sustainable tire solutions showcasing green manufacturing processes"
+            class="banner">
+
         <h1>Go Green with SMART Tire Company's Sustainable Tire Solutions</h1>
-        
+
         <section class="intro">
-            <p>The world is transitioning toward sustainability, and the automotive industry is no exception. As consumers become more environmentally conscious, the demand for products that reduce environmental impact is growing. Tires, often overlooked for their environmental effects, are a significant part of this shift. SMART Tire Company is at the forefront of tire innovation, offering sustainable tire solutions that meet both the needs of consumers and the planet. In this article, we'll explore what makes a tire eco-friendly, the benefits of using sustainable materials, and how SMART Tire Company's commitment to green technology is changing the future of tire manufacturing.</p>
+            <p>The world is transitioning toward sustainability, and the automotive industry is no exception. As
+                consumers become more environmentally conscious, the demand for products that reduce environmental
+                impact is growing. Tires, often overlooked for their environmental effects, are a significant part of
+                this shift. SMART Tire Company is at the forefront of tire innovation, offering sustainable tire
+                solutions that meet both the needs of consumers and the planet. In this article, we'll explore what
+                makes a tire eco-friendly, the benefits of using sustainable materials, and how SMART Tire Company's
+                commitment to green technology is changing the future of tire manufacturing.</p>
         </section>
 
         <section>
             <h2>What Makes Tires Eco-Friendly and Sustainable?</h2>
-            <p>Eco-friendly tires go beyond just being made of natural rubber. The term "sustainable tires" encompasses several key factors, including the materials used, the manufacturing process, and the tire's lifespan.</p>
-            <p>A major element of an eco-friendly tire is the materials it's made from. Traditionally, tires are made from rubber, synthetic compounds, and other materials that are not renewable and can harm the environment. Sustainable tire solutions use alternative materials like bio-based rubber, which is derived from plants such as guayule or dandelion, reducing reliance on traditional rubber production.</p>
-            <p>Additionally, SMART Tire Company is leading the way in incorporating recycled materials into tire production. By using recycled rubber, manufacturers are able to reduce the demand for new resources and decrease overall environmental impact.</p>
+            <p>Eco-friendly tires go beyond just being made of natural rubber. The term "sustainable tires" encompasses
+                several key factors, including the materials used, the manufacturing process, and the tire's lifespan.
+            </p>
+            <p>A major element of an eco-friendly tire is the materials it's made from. Traditionally, tires are made
+                from rubber, synthetic compounds, and other materials that are not renewable and can harm the
+                environment. Sustainable tire solutions use alternative materials like bio-based rubber, which is
+                derived from plants such as guayule or dandelion, reducing reliance on traditional rubber production.
+            </p>
+            <p>Additionally, SMART Tire Company is leading the way in incorporating recycled materials into tire
+                production. By using recycled rubber, manufacturers are able to reduce the demand for new resources and
+                decrease overall environmental impact.</p>
         </section>
 
         <section>
             <h2>How Recycled Rubber is Revolutionizing Tire Manufacturing</h2>
-            <p>Recycling rubber is an essential part of creating sustainable tires. The process of recycling old tires into new ones reduces the need for virgin rubber, which is resource-heavy and can contribute to deforestation. By using recycled rubber, tire manufacturers can lower their carbon footprint while still creating durable and high-performance tires.</p>
-            <p>The recycled rubber used in SMART Tire Company's products is carefully processed to ensure that it meets the same performance standards as new rubber. By using advanced purification techniques, the rubber is refined to enhance its durability and flexibility, making it suitable for high-quality tire production.</p>
-            <p>Recycled tires not only contribute to waste reduction but also help conserve natural resources. This process leads to fewer tires being disposed of in landfills, where they can take hundreds of years to decompose. Additionally, recycling reduces the environmental impact of tire manufacturing by using fewer raw materials.</p>
+            <p>Recycling rubber is an essential part of creating sustainable tires. The process of recycling old tires
+                into new ones reduces the need for virgin rubber, which is resource-heavy and can contribute to
+                deforestation. By using recycled rubber, tire manufacturers can lower their carbon footprint while still
+                creating durable and high-performance tires.</p>
+            <p>The recycled rubber used in SMART Tire Company's products is carefully processed to ensure that it meets
+                the same performance standards as new rubber. By using advanced purification techniques, the rubber is
+                refined to enhance its durability and flexibility, making it suitable for high-quality tire production.
+            </p>
+            <p>Recycled tires not only contribute to waste reduction but also help conserve natural resources. This
+                process leads to fewer tires being disposed of in landfills, where they can take hundreds of years to
+                decompose. Additionally, recycling reduces the environmental impact of tire manufacturing by using fewer
+                raw materials.</p>
         </section>
 
         <section>
             <h2>Reducing Carbon Footprint with Sustainable Tire Design</h2>
-            <p>Sustainability in tire manufacturing extends beyond the materials used; it also includes the tire's overall design and efficiency. SMART Tire Company's commitment to creating tires that reduce carbon footprints is evident in their low-rolling resistance technology, which reduces the amount of energy required to move a vehicle.</p>
-            <p>Tires with low rolling resistance help vehicles achieve better fuel efficiency. When tires use less energy to roll, vehicles consume less fuel, which leads to lower carbon emissions. This is particularly important for hybrid and electric vehicles, which are already focused on reducing energy consumption.</p>
-            <p>By focusing on energy efficiency, tire manufacturers can reduce the environmental impact of tire production itself. SMART Tire Company uses cutting-edge manufacturing techniques to minimize waste and energy consumption in its factories, helping to reduce the overall carbon footprint of tire production.</p>
+            <p>Sustainability in tire manufacturing extends beyond the materials used; it also includes the tire's
+                overall design and efficiency. SMART Tire Company's commitment to creating tires that reduce carbon
+                footprints is evident in their low-rolling resistance technology, which reduces the amount of energy
+                required to move a vehicle.</p>
+            <p>Tires with low rolling resistance help vehicles achieve better fuel efficiency. When tires use less
+                energy to roll, vehicles consume less fuel, which leads to lower carbon emissions. This is particularly
+                important for hybrid and electric vehicles, which are already focused on reducing energy consumption.
+            </p>
+            <p>By focusing on energy efficiency, tire manufacturers can reduce the environmental impact of tire
+                production itself. SMART Tire Company uses cutting-edge manufacturing techniques to minimize waste and
+                energy consumption in its factories, helping to reduce the overall carbon footprint of tire production.
+            </p>
         </section>
 
         <section>
             <h2>The Environmental Benefits of SMART Tire Company's Technology</h2>
-            <p>SMART Tire Company is committed to creating tire solutions that are not only sustainable but also contribute to the overall reduction of environmental harm. By integrating green technology into the design and production of their tires, they have created a product line that stands out in an increasingly eco-conscious market.</p>
-            <p>SMART Tire Company's tires are designed to last longer than traditional tires. The enhanced durability of these tires means fewer replacements are needed over the life of a vehicle, reducing waste and the need for frequent manufacturing. This is a key element of sustainability—reducing the frequency of tire disposal is just as important as using sustainable materials in the first place.</p>
-            <p>Beyond just the materials used in tire construction, SMART Tire Company has implemented sustainable manufacturing practices. The company has committed to reducing its carbon emissions by investing in renewable energy sources and optimizing its factories to use less energy and produce less waste.</p>
+            <p>SMART Tire Company is committed to creating tire solutions that are not only sustainable but also
+                contribute to the overall reduction of environmental harm. By integrating green technology into the
+                design and production of their tires, they have created a product line that stands out in an
+                increasingly eco-conscious market.</p>
+            <p>SMART Tire Company's tires are designed to last longer than traditional tires. The enhanced durability of
+                these tires means fewer replacements are needed over the life of a vehicle, reducing waste and the need
+                for frequent manufacturing. This is a key element of sustainability—reducing the frequency of tire
+                disposal is just as important as using sustainable materials in the first place.</p>
+            <p>Beyond just the materials used in tire construction, SMART Tire Company has implemented sustainable
+                manufacturing practices. The company has committed to reducing its carbon emissions by investing in
+                renewable energy sources and optimizing its factories to use less energy and produce less waste.</p>
         </section>
 
         <section class="conclusion">
-            <p>As the world becomes more conscious of its environmental impact, the need for sustainable tire solutions has never been more urgent. SMART Tire Company's commitment to creating eco-friendly, recyclable, and durable tires is leading the way in a greener future for the automotive industry. By focusing on sustainable materials, energy-efficient manufacturing, and low-carbon tire design, SMART Tire Company is setting a new standard for environmentally responsible tire production. With each tire, the company is not only helping drivers experience superior performance and safety but also contributing to a cleaner, more sustainable world.</p>
+            <p>As the world becomes more conscious of its environmental impact, the need for sustainable tire solutions
+                has never been more urgent. SMART Tire Company's commitment to creating eco-friendly, recyclable, and
+                durable tires is leading the way in a greener future for the automotive industry. By focusing on
+                sustainable materials, energy-efficient manufacturing, and low-carbon tire design, SMART Tire Company is
+                setting a new standard for environmentally responsible tire production. With each tire, the company is
+                not only helping drivers experience superior performance and safety but also contributing to a cleaner,
+                more sustainable world.</p>
         </section>
     </main>
 
@@ -306,23 +366,23 @@
     <script>
         // Smooth scrolling for navigation links
         // Smooth scrolling for in-page navigation links (only href="#...")
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId.startsWith('#')) {
-            e.preventDefault();
-            const targetEl = document.querySelector(targetId);
-            if (targetEl) {
-                targetEl.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    });
-});
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
 
 
         // Scroll to top button functionality
         const scrollTopBtn = document.querySelector('.scroll-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 scrollTopBtn.classList.add('visible');
@@ -339,15 +399,24 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     </script>
 
-   <!-- Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9H1BEBHXV"></script>
-   <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag() { dataLayer.push(arguments); }
-       gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9H1BEBHXV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-       gtag('config', 'G-J9H1BEBHXV');
-   </script>
+        gtag('config', 'G-J9H1BEBHXV');
+    </script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.querySelector('#mobile-menu ul');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+    </script>
 
 </body>
-</html> 
+
+</html>
